@@ -1,11 +1,9 @@
 class Solution {
     public boolean helperFn(int index,int[]arr){
-        int start=index;
-        int end=index+arr.length;
-        int big=arr[index];
-        for(int i=start;i<end;i++){
-            if(arr[i%arr.length]<big) return false;
-            big=arr[i%arr.length];
+        int len=arr.length,big=arr[index];
+        for(int i=index;i<index+len;i++){
+            if(arr[i%len]<big) return false;
+            big=arr[i%len];
         }
         return true;
     }
